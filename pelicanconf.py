@@ -55,7 +55,7 @@ DAY_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/index.html'
 ARCHIVES_SAVE_AS = 'blog/archive.html'
 AUTHOR_SAVE_AS = False
 
-PLUGIN_PATH = '../pelican-plugins'
+PLUGIN_PATH = './pelican-plugins'
 PLUGINS = ['better_figures_and_images', 'assets', 'related_posts', 'extract_toc', 'post_stats', 'multi_part']
 RESPONSIVE_IMAGES = True
 RELATED_POSTS_MAX = 4
