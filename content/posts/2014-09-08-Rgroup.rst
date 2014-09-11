@@ -13,10 +13,9 @@ Hi all,
 
 R group is on again!!!
 
-Get your tasty tarball from:
-`http://ow.ly/BcXiv <http://ow.ly/BcXiv>`_
-
-At least until I take it down in a week or two. The github page is
+The github page for this week is up at:
 `here <https://github.com/kdmurray91/lab-notebook/tree/master/14/140905-keng_stats_rgroup>`_
+
+I've taken the tarball down.
 
 See you all soon!
