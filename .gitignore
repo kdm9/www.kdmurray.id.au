@@ -1,4 +1,6 @@
 *.swp
-output/*
+output
 *.py[cod]
 cache
+drafts
+*.pid
