@@ -1,11 +1,9 @@
-:date: 2014-05-28 14:51
+:title: Home
+:date: 2014-01-01
 :slug: index
 :author: Kevin Murray
-:summary: Ramblings of another 45 percenter
+:summary: Rambunctious ramblings; rarely rewarding or relevant
 
-=======
-Welcome
-=======
+This is the web presence of kdm (Kevin Murray).
 
-This is the web presence of Kevin Murray
-
+I'm a coder and scientist at the ANU.
