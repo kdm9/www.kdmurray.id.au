@@ -21,6 +21,7 @@ COPYRIGHT_UNTIL = date.today().year
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+STATIC_PATHS = ['images', 'static']
 
 # Blogroll
 LINKS =  (('Where I Work', 'http://borevitzlab.anu.edu.au/'),
@@ -42,7 +43,7 @@ PAGE_URL = '{slug}.html'
 PATH = 'content'
 ARTICLE_PATHS = ['posts']
 PAGE_PATHS = ['pages']
-#MARKUP = (('rst', 'html'))
+MARKUP = (('rst', 'html'))
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/index.html'
@@ -51,7 +52,9 @@ DAY_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/index.html'
 ARCHIVES_SAVE_AS = 'blog/archive.html'
 AUTHOR_SAVE_AS = False
 
-PLUGIN_PATH = './pelican-plugins'
+FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.+).*'
+
+PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = [
     'better_figures_and_images',
     'assets',
