@@ -1,3 +1,4 @@
+# coding: utf8
 #!/usr/bin/env python
 from __future__ import unicode_literals
 from datetime import date
@@ -7,7 +8,7 @@ from glob import glob
 
 LOCALE = 'en_AU.UTF-8'
 AUTHOR = 'Kevin Murray'
-SITENAME = 'kdm'
+SITENAME = '𝜥'
 SITEURL = ''
 SITE_DOMAIN = 'www.kdmurray.id.au'
 
