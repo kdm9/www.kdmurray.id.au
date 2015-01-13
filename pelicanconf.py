@@ -2,11 +2,13 @@
 from __future__ import unicode_literals
 from datetime import date
 import locale
+from os import path
+from glob import glob
 
 LOCALE = 'en_AU.UTF-8'
 AUTHOR = 'Kevin Murray'
 SITENAME = 'kdm'
-SITEURL = '/'#http://www.kdmurray.id.au'
+SITEURL = ''
 SITE_DOMAIN = 'www.kdmurray.id.au'
 
 TIMEZONE = 'Australia/Sydney'
@@ -22,6 +24,9 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 STATIC_PATHS = ['images', 'static']
+EXTRA_PATH_METADATA = {
+    'static/favicon.ico': {'path': 'favicon.ico'},
+}
 
 # Blogroll
 LINKS =  (('Where I Work', 'http://borevitzlab.anu.edu.au/'),
