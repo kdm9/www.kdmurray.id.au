@@ -6,8 +6,8 @@
 
 Please send email to '<my first name> at kdmurray.id.au'.
 
-Please encrypt emails to me using my GPG key (id A4B4EE6A), available `here
+Please encrypt emails to me using my GPG key `(A4B4EE6A, available here)
 </static/A4B4EE6A.asc>`_. To do so, I recommend using `Thunderbird
 <https://www.mozilla.org/thunderbird/>`_ and `Enigmail
-<https://www.enigmail.net>`_.
-
+<https://www.enigmail.net>`_ if your current client doesn't support GPG or Open
+PGP.
