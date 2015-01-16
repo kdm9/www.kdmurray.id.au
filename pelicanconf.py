@@ -55,7 +55,7 @@ ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/index.html'
-ARCHIVES_SAVE_AS = 'blog/archive.html'
+ARCHIVE_SAVE_AS = 'blog/archive'
 AUTHOR_SAVE_AS = False
 
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.+).*'
