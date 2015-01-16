@@ -54,11 +54,13 @@ ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/index.html'
-DAY_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/index.html'
-ARCHIVE_SAVE_AS = 'blog/archive'
-AUTHOR_SAVE_AS = False
+ARCHIVES_SAVE_AS = 'blog/archives.html'
+CATEGORIES_SAVE_AS = 'blog/categories.html'
+TAGS_SAVE_AS = 'blog/tags.html'
+DAY_ARCHIVE_SAVE_AS = False
+AUTHORS_SAVE_AS = False
 
-FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.+).*'
+FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.+)(\..*)?'
 
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = [
@@ -72,15 +74,6 @@ PLUGINS = [
 
 RESPONSIVE_IMAGES = True
 RELATED_POSTS_MAX = 4
-
-RELATIVE_URLS = False
-
-#################################
-#
-# Custom Jinja Filters
-#   see: http://jinja.pocoo.org/docs/templates/#filters
-#
-#################################
 
 def suffix(d, wrap=True):
     tmp = 'th' if 11 <= d <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(d % 10, 'th')
