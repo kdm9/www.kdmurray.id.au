@@ -2,9 +2,9 @@
 :date: 2014-01-01
 :slug: index
 :author: Kevin Murray
-:summary: Rambunctious ramblings; rarely rewarding or relevant
+:summary: Random ramblings; rarely rewarding or relevant
 
-This is the web presence of 𝜥 (Kevin Murray).
+This is the web presence of Kevin Murray.
 
 I'm an aspiring bioinformatician working with low-level sequence analysis and
 image anlaysis for plant intergrative genomics and phenomics. I work in the
