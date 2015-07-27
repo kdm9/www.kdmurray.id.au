@@ -8,8 +8,8 @@ PhD
 
 I'm currently a PhD student in Justin Borevitz's lab in the ARC Centre of
 Excellence in Plant Energy Biology at the Austalian National University
-(Canberra). My proposed title is "Novel algorithms for population-scale
-analysis of plant genomes". My thesis is focused on improving the analysis
+(Canberra). My project title is *"Novel algorithms for population-scale
+analysis of plant genomes"*. My thesis is focused on improving the analysis
 software used in plant population genomics, particularly in very large
 population studies.
 
