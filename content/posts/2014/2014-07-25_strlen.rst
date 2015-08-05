@@ -73,8 +73,8 @@ arithmetic operations, something like the following:
         to_cut = strlen(seq);
     }
 
-Depending on optimisation, that will result in three calls to strlen, despite
-the fact that the length of ``seq`` never changes. This is important especially
+Depending on optimisation, that will result in two calls to strlen, despite the
+fact that the length of ``seq`` never changes. This is important especially
 where this occurs in the inner loop of a program.
 
 Also bear in mind that many parsing libraries will provide the length of the
