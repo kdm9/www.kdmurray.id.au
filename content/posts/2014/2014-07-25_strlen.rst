@@ -22,9 +22,10 @@ closely with kernel to record samples of the execution state of a process.
 Then, through what can only be described as dark magic, you get a nice
 instruction level profile of your program. A demo of how this works is below.
 
-::
-    perf record /path/to/your_exe --in huge_file --out huge_file_out --go-faster-you-fecker
-    perf report
+.. code-block:: sh
+
+    $ perf record /path/to/your_exe --in huge_file --out huge_file_out
+    $ perf report
 
 From a profile trace it's a reasonably simple to find slow points in your
 program, as perf provides a brilliant subcommand to do so, ``perf report``.
@@ -42,7 +43,7 @@ many calls to ``strlen`` in the ``knife`` codebase. Some looked like this:
 .. code-block:: C
 
     size_t i;
-    char *seq = '...';
+    char *seq = "...";
     for (i = 0; i < strlen(seq); i++) {
         /* do magic*/
     }
@@ -54,7 +55,7 @@ quick fix is to ensure that this call only occurs once.
 
     size_t i;
     size_t len;
-    char *seq = '...';
+    char *seq = "...";
     for (i = 0, len = strlen(seq); i < len; i++) {
         /* do magic*/
     }
@@ -64,7 +65,7 @@ arithmetic operations, something like the following:
 
 .. code-block:: C
 
-    char *seq = '...';
+    char *seq = "...";
     size_t to_cut = find_out_what_to_cut(seq);
     if (to_cut < strlen(seq)) {
         to_cut -= strlen(seq);
