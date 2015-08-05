@@ -18,7 +18,7 @@ As part of my PhD, I'm working on:
 - My new tool, ``kWIP``: The `k-mer Weighted Inner Product
   <https://github.com/kdmurray91/kwip>`_, a novel de-novo, alignment free way of
   calculating kinship between samples from next-gen sequencing reads.
-- A k-mer analysis and genome assebly tool/libary, `khmer
+- A k-mer analysis and genome assembly tool/library, `khmer
   <https://github.com/dib-lab/khmer>`_. This tool was created and is maintained
   by the Data-Intensive Biology lab of C. Titus Brown. I am upstreaming many
   patches and minor features made during the development of ``kwip``.
