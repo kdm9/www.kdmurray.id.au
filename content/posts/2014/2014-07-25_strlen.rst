@@ -1,0 +1,85 @@
+Strlen is slow.
+###############
+
+:date: 2014-07-25 15:23
+:tags: c bioinformatics
+:category: bioinformatics
+:slug: why-strlen-is-evil
+:author: Kevin Murray
+:summary: Strlen is slow. Don't use it if you can.
+
+Many bioinformatics tools use string operations in C quite extensively.
+However, it appears that many people forget that ``strlen`` is not a
+constant-time function unlike ``std::string::size`` in C++, or ``len('abcd')``
+in python, both of which cache the length.
+
+A tool I use frequently, let's call it ``knife`` (not its real name), was being
+a little on the slow side. The other month I decided to find out why. So I
+built a debug vesion, and got profiling. These days doing so is pretty simple
+in GNU/Linux thanks to a tool called ``perf`` (see `here
+<https://en.wikipedia.org/wiki/Perf_%28Linux%29>`_ for more info). Perf works
+closely with kernel to record samples of the execution state of a process.
+Then, through what can only be described as dark magic, you get a nice
+instruction level profile of your program. A demo of how this works is below.
+
+::
+    perf record /path/to/your_exe --in huge_file --out huge_file_out --go-faster-you-fecker
+    perf report
+
+From a profile trace it's a reasonably simple to find slow points in your
+program, as perf provides a brilliant subcommand to do so, ``perf report``.
+``perf report`` is an ncurses user interface in which one can browse the
+(C-code annotated) assembly code of an executable for "hot" instructions,
+indicating slow sections of code. It allows one to descend the call tree and
+show relative quantities of time spent in each function. This information arms
+one with the tools they need to refactor and optimise only the parts of the
+code *shown emprirically* to be slow.
+
+When I went through this process with ``knife``, I noticed one thing standing
+out very clearly. ``strlen``. About 30% of CPU time was spent in one of the
+many calls to ``strlen`` in the ``knife`` codebase. Some looked like this:
+
+.. code-block:: C
+
+    size_t i;
+    char *seq = '...';
+    for (i = 0; i < strlen(seq); i++) {
+        /* do magic*/
+    }
+
+However, this calls ``strlen(seq)`` **every** iteration of the for loop. A
+quick fix is to ensure that this call only occurs once.
+
+.. code-block:: C
+
+    size_t i;
+    size_t len;
+    char *seq = '...';
+    for (i = 0, len = strlen(seq); i < len; i++) {
+        /* do magic*/
+    }
+
+Another slow pattern in ``knife`` was to use ``strlen()`` as an operator in
+arithmetic operations, something like the following:
+
+.. code-block:: C
+
+    char *seq = '...';
+    size_t to_cut = find_out_what_to_cut(seq);
+    if (to_cut < strlen(seq)) {
+        to_cut -= strlen(seq);
+    } else {
+        to_cut = strlen(seq);
+    }
+
+Depending on optimisation, that will result in three calls to strlen, despite
+the fact that the length of ``seq`` never changes. This is important especially
+where this occurs in the inner loop of a program.
+
+Also bear in mind that many parsing libraries will provide the length of the
+thing being parsed. There are also very good string manipulation libaries which
+make all of these issues go away to an extent, by caching the length of the
+string (including `ustr <http://www.and.org/ustr>`_).
+
+To cut a long story short, be wary of using ``strlen`` and use it sparingly if
+its use is necessary.
