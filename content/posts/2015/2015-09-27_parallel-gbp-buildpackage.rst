@@ -17,3 +17,8 @@ and with ``gbp buildpackage``.
 
     export DEB_BUILD_OPTIONS="parallel=4"  # use 4 cpus
     gbp buildpackage
+
+
+See `this askubuntu thread
+<http://askubuntu.com/questions/337093/how-to-run-parallel-make-with-debuild>`_
+for more detail.
