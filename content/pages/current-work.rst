@@ -22,3 +22,9 @@ As part of my PhD, I'm working on:
   <https://github.com/dib-lab/khmer>`_. This tool was created and is maintained
   by the Data-Intensive Biology lab of C. Titus Brown. I am upstreaming many
   patches and minor features made during the development of ``kwip``.
+
+Free software
+-------------
+
+Outside academia, I contribute to several free software projects, including
+Debian-Med, tor, and others.
