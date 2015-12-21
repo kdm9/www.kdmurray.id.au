@@ -45,3 +45,10 @@ so now we run: ::
 
 And you're all set.
 
+END OF UBUNTU WIKI TEXT.
+
+
+While you're at it, the whole Ubuntu wiki `pbuilder page
+<https://wiki.ubuntu.com/PbuilderHowto>`_ is pretty awesome, and worth a read.
+
+
