@@ -18,13 +18,30 @@ As part of my PhD, I'm working on:
 - My new tool, ``kWIP``: The `k-mer Weighted Inner Product
   <https://github.com/kdmurray91/kwip>`_, a novel de-novo, alignment free way of
   calculating kinship between samples from next-gen sequencing reads.
-- A k-mer analysis and genome assembly tool/library, `khmer
-  <https://github.com/dib-lab/khmer>`_. This tool was created and is maintained
-  by the Data-Intensive Biology lab of C. Titus Brown. I am upstreaming many
-  patches and minor features made during the development of ``kwip``.
 
 Free software
 -------------
 
-Outside academia, I contribute to several free software projects, including
-Debian-Med, tor, and others.
+
+I've contributed to the following free software or projects
+
+Scientfic
+^^^^^^^^^
+
+- A k-mer analysis and genome assembly tool/library, `khmer
+  <https://github.com/dib-lab/khmer>`_.
+- The `common workflow language
+  <https://github.com/common-workflow-language/cwltool>`_.
+
+Debian
+^^^^^^
+
+I am a member of the Debian Med team, and work on packaging tools for Debian.
+A list of packages I maintain or co-maintain is available `here
+<https://qa.debian.org/developer.php?login=spam%40kdmurray.id.au&comaint=yes>`_.
+
+
+Other
+^^^^^
+
+- ``tor``
