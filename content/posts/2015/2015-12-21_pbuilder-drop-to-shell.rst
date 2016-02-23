@@ -2,8 +2,8 @@ Drop to a shell on gbp buildpackage failure
 ===========================================
 
 :date: 2015-12-21 15:43
-:tags: debian
-:category: debian
+:tags: debian, config
+:category: debian-dev
 :slug: pbuilder-hooks
 :author: Kevin Murray
 :summary: You can use pbuilder hooks to drop to a shell on build failure.

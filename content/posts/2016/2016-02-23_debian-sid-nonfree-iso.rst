@@ -3,8 +3,8 @@ Getting a Debian testing/sid ISO with firmware
 ==============================================
 
 :date: 2016-02-23 16:23
-:tags: installer
-:category: debian
+:tags: debian, install
+:category: notes-to-self
 :slug: debian-sid-iso-nonfree
 :author: Kevin Murray
 :summary: There's an annoyingly long path to the ISOs

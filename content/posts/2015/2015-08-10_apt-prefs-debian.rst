@@ -2,7 +2,7 @@ Apt Preferences and Pinning in Debian
 =====================================
 
 :date: 2015-08-10 14:55
-:tags: debian configs
+:tags: debian, configs
 :category: config
 :slug: debian-apt-preferences
 :author: Kevin Murray

@@ -2,8 +2,8 @@ Using getopt twice in one program
 #################################
 
 :date: 2015-06-26 12:00
-:tags: c bioinformatics
-:category: bioinformatics
+:tags: c, bioinformatics
+:category: coding
 :slug: getopt-twice
 :author: Kevin Murray
 :summary: Getopt won't run twice? There's an easy fix

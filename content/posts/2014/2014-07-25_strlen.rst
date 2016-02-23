@@ -2,8 +2,8 @@ Strlen is slow.
 ###############
 
 :date: 2014-07-25 15:23
-:tags: c bioinformatics
-:category: bioinformatics
+:tags: c, bioinformatics
+:category: coding
 :slug: why-strlen-is-evil
 :author: Kevin Murray
 :summary: Strlen is slow. Don't use it if you can.
