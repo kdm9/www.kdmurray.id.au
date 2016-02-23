@@ -18,7 +18,7 @@ often requred for NICs or WiFi recievers), the following will work.
 
    for file in firmware-testing-amd64-netinst.iso SHA512SUMS SHA512SUMS.sign
    do
-        wget -O $file ${baseurl}${file}
+        wget -c -O $file ${baseurl}${file}
    done
 
    gpg --recv-keys 'F41D 3034 2F35 4669 5F65  C669 4246 8F40 09EA 8AC3'
