@@ -10,6 +10,6 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://www.kdmurray.id.au'
+SITEURL = 'https://www.kdmurray.id.au'
 RELATIVE_URLS = False
 DELETE_OUTPUT_DIRECTORY = True
