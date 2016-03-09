@@ -12,8 +12,8 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=vps
-SSH_TARGET_DIR=~/public_html/
+SSH_HOST=nciwww
+SSH_TARGET_DIR=/srv/www/kevin/kdm
 
 S3_BUCKET=my_s3_bucket
 
