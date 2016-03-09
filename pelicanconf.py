@@ -35,8 +35,8 @@ LINKS =  (('Where I Work', 'http://borevitzlab.anu.edu.au/'),
 
 # Social widget
 SOCIAL = (
-    ('Twitter', 'http://twitter.com/kdmurray91'),
-    ('GitHub', 'http://github.com/kdmurray91'),
+    ('Twitter', 'https://twitter.com/kdmurray91'),
+    ('GitHub', 'https://github.com/kdmurray91'),
 )
 
 DEFAULT_PAGINATION = 10
