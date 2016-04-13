@@ -1,0 +1,11 @@
+===========
+<+title+>
+===========
+
+:date: %DATE%
+:tags: <+tags+>
+:category: <+category+>
+:slug: %TITLE%
+:author: Kevin Murray
+:summary: <+summary+>
+

@@ -23,6 +23,9 @@ CLOUDFILES_CONTAINER=my_cloudfiles_container
 
 DROPBOX_DIR=~/Dropbox/Public/
 
+DATE = $(shell date +%Y-%m-%d)
+YEAR = $(shell date +%Y)
+
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -52,6 +55,11 @@ help:
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+
+post:
+
+	sed -e 's/%DATE%/$(DATE)/g' -e 's/%TITLE%/$(TITLE)/' .template.rst \
+		> content/posts/$(YEAR)/$(DATE)_$(TITLE).rst
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
