@@ -57,7 +57,6 @@ html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 post:
-
 	sed -e 's/%DATE%/$(DATE)/g' -e 's/%TITLE%/$(TITLE)/' .template.rst \
 		> content/posts/$(YEAR)/$(DATE)_$(TITLE).rst
 
